@@ -1,0 +1,19 @@
+1) register:
+	user can register with his email which is unique ,  and his name ,
+	 password and image isn't requierd , if he dosn't choose image we will set a default on;
+2) login:
+	user will login with his email and password , 
+	if he forget password we will redirect him to apage to insert his mail and we will send him password;
+3) navigate:
+	any person could review our home page and our posts 
+	but without abailty of add new post
+4) registered user:
+	will be able to view all post 
+	add new post only to his category sector 
+	edit or delete his post within 1 hour only
+	active/deactive his account
+5) admin:
+	will be able to edit or delete any post
+	add ability if is_published to posts or stop it
+	 active user or deactive him to stop him of login
+	specify a user sector or he will not be able to add posts   
