@@ -58,8 +58,8 @@ return [
             'port' => env('DB_PORT', '3306'),
             // , database_path('database.mysql')
             'database' => env('DB_DATABASE', 'khamsat'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', 'iti'),
+            'username' => env('DB_USERNAME', 'adminERHxgXf'),
+            'password' => env('DB_PASSWORD', 'py74D9bNttpP'),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
