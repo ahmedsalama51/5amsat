@@ -25,6 +25,7 @@
  Route::group(['middleware' => ['web']], function () {
 
 	Route::get('/', 'PagesControllers@index');
+	Route::post('/search', 'PagesControllers@search');
 	Route::get('about', 'PagesControllers@about');
 
 	//categories rooutes

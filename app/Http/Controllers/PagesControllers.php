@@ -44,5 +44,31 @@ class PagesControllers extends Controller
 		return view ('pages.about',compact('users'),['posts'=> $this->posts,'categories'=> $this->categories,'tags'=> $this->tags,'topviewd'=>$this->topviewd]);
 	}
 
+	public function search(Request $request){
+
+		$searchterm = $request->searchinput;
+		// return $searchterm;
+		if ($searchterm)
+		{          
+		    $resultofpost = \DB::table('posts')->where('title', 'LIKE', '%'. $searchterm .'%')
+		    ->orWhere('description', 'LIKE', '%'. $searchterm .'%')
+		    ->get();
+		    
+		    $resultoftag = \DB::table('tags')
+		    ->where('tag', 'LIKE', '%'. $searchterm .'%')
+		    ->get();
+		    
+		    $resultofcategory = \DB::table('categories')
+		    ->where('category', 'LIKE', '%'. $searchterm .'%')
+		    ->get();
+
+		    $resultofuser = \DB::table('users')
+		    ->where('name', 'LIKE', '%'. $searchterm .'%')
+		    ->orWhere('email', 'LIKE', '%'. $searchterm .'%')
+		    ->get();
+				return view('pages.search',compact('resultofpost','resultoftag','resultofcategory','resultofuser'),['posts'=> $this->posts,'categories'=> $this->categories,'tags'=> $this->tags,'topviewd'=>$this->topviewd]);
+	    }
+ }
+
 
 }

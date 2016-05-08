@@ -17,3 +17,10 @@
 	add ability if is_published to posts or stop it
 	 active user or deactive him to stop him of login
 	specify a user sector or he will not be able to add posts   
+7) post:
+	user can add title which is unique ;
+	description to be apear on post advs , with title and image;
+	image which we resize it and add our watermark on it befor upload;
+	tags which is filterd by (#) sigen and tags name are unique
+		 but manyTomany relation between post & tag give abiltity to use same tag on any post
+8) tags and category are filter search to user

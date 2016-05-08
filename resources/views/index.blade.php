@@ -65,8 +65,9 @@
 		</div>
 		<div class="col-md-3 bann-left">
 			<div class="b-search">
-				<form>
-					<input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+				<form action="/search" method="POST">
+				{!! csrf_field() !!}
+					<input name="searchinput" type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
 					<input type="submit" value="">
 				</form>
 			</div>
